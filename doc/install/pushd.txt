@@ -2,8 +2,10 @@ ec2-run-instances --instance-type t1.micro --availability-zone us-west-1b --key 
 
 sudo apt-get update
 sudo apt-get -y install redis-server nodejs npm git make g++
-sudo npm install coffee-script -g
 
+sudo npm install coffee-script -g
 npm install connect crc debug methods fresh range-parser cookie-signature cookie send
+
 cp settings-sample.coffee settings.coffee && vi settings.coffee # Disable apn, as it requires an SSL cert.
+
 sudo coffee pushd.coffee
